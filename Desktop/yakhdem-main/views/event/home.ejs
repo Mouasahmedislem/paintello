@@ -1,0 +1,37 @@
+<%- include ("../partials/header") %>.
+
+<% if (successMsg) { %>
+  <div class="alert alert-success"><%= successMsg %></div>
+  <% } %>
+  <!-- Navigation & Intro -->
+  <!-- sale content -->
+      <hr class="mt-4">
+       <div class="bm-page">
+          <div class="container">
+              <div class="row">
+              <div class="order-lg-last">
+              <div class="mb-4 mb-lg-5 bm-content">
+
+  <h2 class="text-center text-uppercase">Sale</h2>
+  <ul class="row justify-content-center list-unstyled mb-4">
+    <% sales.forEach(function(sale){ %>
+
+  <li class="col-6 col-sm-4 col-md-3">
+  <a class="d-block mt-4 text-center text-dark" href="<%= sale.href %>">
+  <div class="mb-1 px-2">
+  <img  class="border img-fluid rounded-circle bm-lazyload lazyloaded" data-src="//cdn.bmstores.co.uk/images/dmCategory/thumbnailImageResponsive/wallpaper5.jpg" width="160" height="160" src="<%= sale.image %>">
+  </div>
+  <h2 class="h6 mb-0"><%= sale.title %></h2>
+  </a>
+  </li>
+  <% }); %>
+  
+</ul></div></div></div></div></div>
+        
+  <!-- sale content -->
+             <hr class="mt-4">
+
+  </main>
+  <!-- Main content -->
+
+  <%- include ("../partials/footer") %>.
